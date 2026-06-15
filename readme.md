@@ -290,7 +290,7 @@ Sequence completed successfully.
 # 12. Screenshots
 
 ## Figure 12.1 – Python Automation Log
-![alt text](./screenshots/connecting.png)
+![alt text](./screenshots/connection.png)
 
 Description:
 
