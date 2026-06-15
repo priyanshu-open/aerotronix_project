@@ -290,7 +290,7 @@ Sequence completed successfully.
 # 12. Screenshots
 
 ## Figure 12.1 – Python Automation Log
-![alt text](connecting.png)
+![alt text](./screenshots/connecting.png)
 
 Description:
 
@@ -299,7 +299,7 @@ Terminal output confirming successful execution of the complete autonomous fligh
 ---
 
 ## Figure 12.2 – SITL Telemetry Validation
-![alt text](takeoff.png)
+![alt text](./screenshots/takeoff.png)
 
 Description:
 
