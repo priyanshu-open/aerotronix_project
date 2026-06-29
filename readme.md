@@ -377,6 +377,37 @@ Phase 1 confirms readiness for mission-level autonomy development.
 * Telemetry logging
 * Geofencing
 
+## ports explanation
+Our drones are broadcasting on 5760, 5770, and 5780. When you use sim_vehicle.py with the -I flag, it defaults to outputting MAVLink data on 14550 + (10 * instance_number).
+
+Drone 1 (-I0): Outputting to 14550
+
+Drone 2 (-I1): Outputting to 14560
+
+Drone 3 (-I2): Outputting to 14570
+
+Step 2: Configure Mission Planner Connections
+Do not use port 14550 for all of them. Change your connection settings for each window as follows:
+
+Window 1: Connect via UDP, set port to 14550.
+
+Window 2: Connect via UDP, set port to 14560.
+
+Window 3 (if open): Connect via UDP, set port to 14570.
+UDP14550-1-QUADROTOR
+``` bash 
+cd ~/aerotronix_project
+
+# Run each command in seperate terminal
+sim_vehicle.py -v ArduCopter -I0 --console --out 127.0.0.1:14555
+
+sim_vehicle.py -v ArduCopter -I1 --console --out 127.0.0.1:14565
+
+sim_vehicle.py -v ArduCopter -I2 --console --out 127.0.0.1:14575 
+ 
+``` bash
+python swarm_move.py
+
 ## Phase 3
 
 * Computer vision integration
